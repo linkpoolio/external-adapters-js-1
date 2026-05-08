@@ -6288,7 +6288,7 @@ const RAW_RUNTIME_STATE =
           ["pino-pretty", "npm:13.1.3"],\
           ["prom-client", "npm:15.1.3"],\
           ["redlock", "npm:5.0.0-beta.2"],\
-          ["ws", "virtual:35134abbe002d5a0bc4ef4d26adee2b381ad896248f65984a5e4d47c734a62eb4f4a04f947c76163753e37ab74cddfdd084ecb9823184e399eda7a5ef44ad498#npm:8.20.0"]\
+          ["ws", "virtual:ec0cdcb6edc9ccefb50ed17a07c0ca29b822ac048d3ffda43e8687d1ae84fdcccad53637859dac2931b0281b215892fcedf266efb73b98b7115fd287ab867748#npm:8.20.0"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -6307,7 +6307,7 @@ const RAW_RUNTIME_STATE =
           ["pino-pretty", "npm:13.1.3"],\
           ["prom-client", "npm:15.1.3"],\
           ["redlock", "npm:5.0.0-beta.2"],\
-          ["ws", "virtual:35134abbe002d5a0bc4ef4d26adee2b381ad896248f65984a5e4d47c734a62eb4f4a04f947c76163753e37ab74cddfdd084ecb9823184e399eda7a5ef44ad498#npm:8.20.0"]\
+          ["ws", "virtual:ec0cdcb6edc9ccefb50ed17a07c0ca29b822ac048d3ffda43e8687d1ae84fdcccad53637859dac2931b0281b215892fcedf266efb73b98b7115fd287ab867748#npm:8.20.0"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -6326,7 +6326,7 @@ const RAW_RUNTIME_STATE =
           ["pino-pretty", "npm:13.1.3"],\
           ["prom-client", "npm:15.1.3"],\
           ["redlock", "npm:5.0.0-beta.2"],\
-          ["ws", "virtual:35134abbe002d5a0bc4ef4d26adee2b381ad896248f65984a5e4d47c734a62eb4f4a04f947c76163753e37ab74cddfdd084ecb9823184e399eda7a5ef44ad498#npm:8.20.0"]\
+          ["ws", "virtual:ec0cdcb6edc9ccefb50ed17a07c0ca29b822ac048d3ffda43e8687d1ae84fdcccad53637859dac2931b0281b215892fcedf266efb73b98b7115fd287ab867748#npm:8.20.0"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -6347,6 +6347,25 @@ const RAW_RUNTIME_STATE =
           ["ws", "virtual:76798ef4297c06624e6a890a042a8db65fa32cc5d1d7d8828006e188fc8f070b35b00d18d56a03211a6f7ef7c28f126042b0f4ef3fc99489849fd25a37aa15d0#npm:8.18.3"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["portal:/Users/mxiao/Documents/ea-framework-js/dist/src::locator=%40chainlink%2Ffinage-adapter%40workspace%3Apackages%2Fsources%2Ffinage", {\
+        "packageLocation": "../ea-framework-js/dist/src/",\
+        "packageDependencies": [\
+          ["@chainlink/external-adapter-framework", "portal:/Users/mxiao/Documents/ea-framework-js/dist/src::locator=%40chainlink%2Ffinage-adapter%40workspace%3Apackages%2Fsources%2Ffinage"],\
+          ["@date-fns/tz", "npm:1.4.1"],\
+          ["ajv", "npm:8.20.0"],\
+          ["axios", "npm:1.16.0"],\
+          ["eventsource", "npm:4.1.0"],\
+          ["fastify", "npm:5.8.5"],\
+          ["ioredis", "npm:5.10.1"],\
+          ["mock-socket", "npm:9.3.1"],\
+          ["pino", "npm:10.3.1"],\
+          ["pino-pretty", "npm:13.1.3"],\
+          ["prom-client", "npm:15.1.3"],\
+          ["redlock", "npm:5.0.0-beta.2"],\
+          ["ws", "virtual:ec0cdcb6edc9ccefb50ed17a07c0ca29b822ac048d3ffda43e8687d1ae84fdcccad53637859dac2931b0281b215892fcedf266efb73b98b7115fd287ab867748#npm:8.20.0"]\
+        ],\
+        "linkType": "SOFT"\
       }]\
     ]],\
     ["@chainlink/external-adapters-js", [\
@@ -6386,7 +6405,7 @@ const RAW_RUNTIME_STATE =
       ["workspace:packages/sources/finage", {\
         "packageLocation": "./packages/sources/finage/",\
         "packageDependencies": [\
-          ["@chainlink/external-adapter-framework", "npm:2.13.1"],\
+          ["@chainlink/external-adapter-framework", "portal:/Users/mxiao/Documents/ea-framework-js/dist/src::locator=%40chainlink%2Ffinage-adapter%40workspace%3Apackages%2Fsources%2Ffinage"],\
           ["@chainlink/finage-adapter", "workspace:packages/sources/finage"],\
           ["@sinonjs/fake-timers", "npm:9.1.2"],\
           ["@types/jest", "npm:29.5.14"],\
@@ -25822,23 +25841,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:35134abbe002d5a0bc4ef4d26adee2b381ad896248f65984a5e4d47c734a62eb4f4a04f947c76163753e37ab74cddfdd084ecb9823184e399eda7a5ef44ad498#npm:8.20.0", {\
-        "packageLocation": "./.yarn/__virtual__/ws-virtual-6f4b74e52d/0/cache/ws-npm-8.20.0-b8684d1fe3-b7ab934b21.zip/node_modules/ws/",\
-        "packageDependencies": [\
-          ["@types/bufferutil", null],\
-          ["@types/utf-8-validate", null],\
-          ["bufferutil", null],\
-          ["utf-8-validate", null],\
-          ["ws", "virtual:35134abbe002d5a0bc4ef4d26adee2b381ad896248f65984a5e4d47c734a62eb4f4a04f947c76163753e37ab74cddfdd084ecb9823184e399eda7a5ef44ad498#npm:8.20.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/bufferutil",\
-          "@types/utf-8-validate",\
-          "bufferutil",\
-          "utf-8-validate"\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["virtual:76798ef4297c06624e6a890a042a8db65fa32cc5d1d7d8828006e188fc8f070b35b00d18d56a03211a6f7ef7c28f126042b0f4ef3fc99489849fd25a37aa15d0#npm:8.18.3", {\
         "packageLocation": "./.yarn/__virtual__/ws-virtual-9b565f5760/0/cache/ws-npm-8.18.3-665d39209d-725964438d.zip/node_modules/ws/",\
         "packageDependencies": [\
@@ -25881,6 +25883,23 @@ const RAW_RUNTIME_STATE =
           ["bufferutil", null],\
           ["utf-8-validate", null],\
           ["ws", "virtual:d1125cad7cf4c8422f5687c530d5c77cd47d0284668bdf40ba159afe1dece93ccff4a39786c83d40b9ae95db12169db693190e9ab277c1a495c58278ba6e6890#npm:8.19.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/bufferutil",\
+          "@types/utf-8-validate",\
+          "bufferutil",\
+          "utf-8-validate"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:ec0cdcb6edc9ccefb50ed17a07c0ca29b822ac048d3ffda43e8687d1ae84fdcccad53637859dac2931b0281b215892fcedf266efb73b98b7115fd287ab867748#npm:8.20.0", {\
+        "packageLocation": "./.yarn/__virtual__/ws-virtual-2f6a186da6/0/cache/ws-npm-8.20.0-b8684d1fe3-b7ab934b21.zip/node_modules/ws/",\
+        "packageDependencies": [\
+          ["@types/bufferutil", null],\
+          ["@types/utf-8-validate", null],\
+          ["bufferutil", null],\
+          ["utf-8-validate", null],\
+          ["ws", "virtual:ec0cdcb6edc9ccefb50ed17a07c0ca29b822ac048d3ffda43e8687d1ae84fdcccad53637859dac2931b0281b215892fcedf266efb73b98b7115fd287ab867748#npm:8.20.0"]\
         ],\
         "packagePeers": [\
           "@types/bufferutil",\
