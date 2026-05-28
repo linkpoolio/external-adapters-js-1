@@ -6183,25 +6183,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@chainlink/external-adapter-framework", [\
-      ["npm:2.11.1", {\
-        "packageLocation": "./.yarn/cache/@chainlink-external-adapter-framework-npm-2.11.1-3ad4f998bb-5d0ba40462.zip/node_modules/@chainlink/external-adapter-framework/",\
-        "packageDependencies": [\
-          ["@chainlink/external-adapter-framework", "npm:2.11.1"],\
-          ["@date-fns/tz", "npm:1.4.1"],\
-          ["ajv", "npm:8.17.1"],\
-          ["axios", "npm:1.13.2"],\
-          ["eventsource", "npm:4.1.0"],\
-          ["fastify", "npm:5.6.2"],\
-          ["ioredis", "npm:5.8.2"],\
-          ["mock-socket", "npm:9.3.1"],\
-          ["pino", "npm:10.1.0"],\
-          ["pino-pretty", "npm:13.1.2"],\
-          ["prom-client", "npm:15.1.3"],\
-          ["redlock", "npm:5.0.0-beta.2"],\
-          ["ws", "virtual:76798ef4297c06624e6a890a042a8db65fa32cc5d1d7d8828006e188fc8f070b35b00d18d56a03211a6f7ef7c28f126042b0f4ef3fc99489849fd25a37aa15d0#npm:8.18.3"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:2.11.6", {\
         "packageLocation": "./.yarn/cache/@chainlink-external-adapter-framework-npm-2.11.6-3b1c295ff1-781e5ef9fa.zip/node_modules/@chainlink/external-adapter-framework/",\
         "packageDependencies": [\
@@ -7201,7 +7182,7 @@ const RAW_RUNTIME_STATE =
       ["workspace:packages/sources/matrixdock", {\
         "packageLocation": "./packages/sources/matrixdock/",\
         "packageDependencies": [\
-          ["@chainlink/external-adapter-framework", "npm:2.11.1"],\
+          ["@chainlink/external-adapter-framework", "npm:2.11.6"],\
           ["@chainlink/matrixdock-adapter", "workspace:packages/sources/matrixdock"],\
           ["@types/crypto-js", "npm:4.2.2"],\
           ["@types/jest", "npm:29.5.14"],\
@@ -16446,16 +16427,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:1.13.2", {\
-        "packageLocation": "./.yarn/cache/axios-npm-1.13.2-90e3ae8f5d-ae4e06dcd1.zip/node_modules/axios/",\
-        "packageDependencies": [\
-          ["axios", "npm:1.13.2"],\
-          ["follow-redirects", "virtual:ed8865f696cebfbc109886bcd430c823f73cb3daaa6597dac1f006748e0fc10ed81734823f049aec03fadda2608be9aa560f98b843c8321891f307f4a175db89#npm:1.16.0"],\
-          ["form-data", "npm:4.0.4"],\
-          ["proxy-from-env", "npm:1.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:1.13.4", {\
         "packageLocation": "./.yarn/cache/axios-npm-1.13.4-7c78039beb-54b7ef71c6.zip/node_modules/axios/",\
         "packageDependencies": [\
@@ -19524,28 +19495,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:5.6.2", {\
-        "packageLocation": "./.yarn/cache/fastify-npm-5.6.2-3b56a41287-8c006cd600.zip/node_modules/fastify/",\
-        "packageDependencies": [\
-          ["@fastify/ajv-compiler", "npm:4.0.2"],\
-          ["@fastify/error", "npm:4.0.0"],\
-          ["@fastify/fast-json-stringify-compiler", "npm:5.0.2"],\
-          ["@fastify/proxy-addr", "npm:5.0.0"],\
-          ["abstract-logging", "npm:2.0.1"],\
-          ["avvio", "npm:9.1.0"],\
-          ["fast-json-stringify", "npm:6.0.0"],\
-          ["fastify", "npm:5.6.2"],\
-          ["find-my-way", "npm:9.1.0"],\
-          ["light-my-request", "npm:6.4.0"],\
-          ["pino", "npm:10.1.0"],\
-          ["process-warning", "npm:5.0.0"],\
-          ["rfdc", "npm:1.4.1"],\
-          ["secure-json-parse", "npm:4.0.0"],\
-          ["semver", "npm:7.7.2"],\
-          ["toad-cache", "npm:3.7.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:5.7.3", {\
         "packageLocation": "./.yarn/cache/fastify-npm-5.7.3-2a03de08e9-10cad30dc4.zip/node_modules/fastify/",\
         "packageDependencies": [\
@@ -20731,22 +20680,6 @@ const RAW_RUNTIME_STATE =
           ["debug", "virtual:e376c6d25689d1413f13b759a5649fe969efab30320e886cab81ece2b6daf8c4c74f642faff7228a9a286b4b82bc7bac5773e45f1085910307cd111b19a8cd17#npm:4.3.7"],\
           ["denque", "npm:2.1.0"],\
           ["ioredis", "npm:5.8.1"],\
-          ["lodash.defaults", "npm:4.2.0"],\
-          ["lodash.isarguments", "npm:3.1.0"],\
-          ["redis-errors", "npm:1.2.0"],\
-          ["redis-parser", "npm:3.0.0"],\
-          ["standard-as-callback", "npm:2.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:5.8.2", {\
-        "packageLocation": "./.yarn/cache/ioredis-npm-5.8.2-c93c355ee3-550cbe7bba.zip/node_modules/ioredis/",\
-        "packageDependencies": [\
-          ["@ioredis/commands", "npm:1.4.0"],\
-          ["cluster-key-slot", "npm:1.1.2"],\
-          ["debug", "virtual:e376c6d25689d1413f13b759a5649fe969efab30320e886cab81ece2b6daf8c4c74f642faff7228a9a286b4b82bc7bac5773e45f1085910307cd111b19a8cd17#npm:4.3.7"],\
-          ["denque", "npm:2.1.0"],\
-          ["ioredis", "npm:5.8.2"],\
           ["lodash.defaults", "npm:4.2.0"],\
           ["lodash.isarguments", "npm:3.1.0"],\
           ["redis-errors", "npm:1.2.0"],\

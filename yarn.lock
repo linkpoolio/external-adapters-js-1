@@ -3529,28 +3529,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@chainlink/external-adapter-framework@npm:2.11.1":
-  version: 2.11.1
-  resolution: "@chainlink/external-adapter-framework@npm:2.11.1"
-  dependencies:
-    "@date-fns/tz": "npm:1.4.1"
-    ajv: "npm:8.17.1"
-    axios: "npm:1.13.2"
-    eventsource: "npm:4.1.0"
-    fastify: "npm:5.6.2"
-    ioredis: "npm:5.8.2"
-    mock-socket: "npm:9.3.1"
-    pino: "npm:10.1.0"
-    pino-pretty: "npm:13.1.2"
-    prom-client: "npm:15.1.3"
-    redlock: "npm:5.0.0-beta.2"
-    ws: "npm:8.18.3"
-  bin:
-    create-external-adapter: adapter-generator.js
-  checksum: 10/5d0ba4046254c8bb60f13718a79ec1accde79ba750f4d8f2bb1dc51215685120a8428b6cc8f8fc71d140f2e7c0319dc7184923c3cce1fc7d49404e8659e2369a
-  languageName: node
-  linkType: hard
-
 "@chainlink/external-adapter-framework@npm:2.11.6":
   version: 2.11.6
   resolution: "@chainlink/external-adapter-framework@npm:2.11.6"
@@ -4489,7 +4467,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@chainlink/matrixdock-adapter@workspace:packages/sources/matrixdock"
   dependencies:
-    "@chainlink/external-adapter-framework": "npm:2.11.1"
+    "@chainlink/external-adapter-framework": "npm:2.11.6"
     "@types/crypto-js": "npm:4.2.2"
     "@types/jest": "npm:^29.5.14"
     "@types/node": "npm:22.14.1"
@@ -11941,17 +11919,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:1.13.2":
-  version: 1.13.2
-  resolution: "axios@npm:1.13.2"
-  dependencies:
-    follow-redirects: "npm:^1.15.6"
-    form-data: "npm:^4.0.4"
-    proxy-from-env: "npm:^1.1.0"
-  checksum: 10/ae4e06dcd18289f2fd18179256d550d27f9a53ecb2f9c59f2ccc4efd1d7151839ba8c3e0fb533dac793e4a59a576ca8689a19244dce5c396680837674a47a867
-  languageName: node
-  linkType: hard
-
 "axios@npm:1.13.4, axios@npm:^1.12.2":
   version: 1.13.4
   resolution: "axios@npm:1.13.4"
@@ -14532,29 +14499,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fastify@npm:5.6.2":
-  version: 5.6.2
-  resolution: "fastify@npm:5.6.2"
-  dependencies:
-    "@fastify/ajv-compiler": "npm:^4.0.0"
-    "@fastify/error": "npm:^4.0.0"
-    "@fastify/fast-json-stringify-compiler": "npm:^5.0.0"
-    "@fastify/proxy-addr": "npm:^5.0.0"
-    abstract-logging: "npm:^2.0.1"
-    avvio: "npm:^9.0.0"
-    fast-json-stringify: "npm:^6.0.0"
-    find-my-way: "npm:^9.0.0"
-    light-my-request: "npm:^6.0.0"
-    pino: "npm:^10.1.0"
-    process-warning: "npm:^5.0.0"
-    rfdc: "npm:^1.3.1"
-    secure-json-parse: "npm:^4.0.0"
-    semver: "npm:^7.6.0"
-    toad-cache: "npm:^3.7.0"
-  checksum: 10/8c006cd600b44b2bb82526035bca3ebe3491600ac7aa0225981d75a1be171dc45aac2c045d8fc7c8c723ac2996544983b8c8a6b538db0dcf60bb9b875ce7452d
-  languageName: node
-  linkType: hard
-
 "fastify@npm:5.7.3":
   version: 5.7.3
   resolution: "fastify@npm:5.7.3"
@@ -15628,23 +15572,6 @@ __metadata:
     redis-parser: "npm:^3.0.0"
     standard-as-callback: "npm:^2.1.0"
   checksum: 10/f1e328e9ceedde9d9c3ba8b8b844908302852006150601e6918f384d5f9d507cd5e4a9fcfb3bdb6c96cbb5477b89b837b3d38b0d62e1f173408fef46f15734df
-  languageName: node
-  linkType: hard
-
-"ioredis@npm:5.8.2":
-  version: 5.8.2
-  resolution: "ioredis@npm:5.8.2"
-  dependencies:
-    "@ioredis/commands": "npm:1.4.0"
-    cluster-key-slot: "npm:^1.1.0"
-    debug: "npm:^4.3.4"
-    denque: "npm:^2.1.0"
-    lodash.defaults: "npm:^4.2.0"
-    lodash.isarguments: "npm:^3.1.0"
-    redis-errors: "npm:^1.2.0"
-    redis-parser: "npm:^3.0.0"
-    standard-as-callback: "npm:^2.1.0"
-  checksum: 10/550cbe7bba409b5bc38fa290fd2de7f569548603892904680db0f5e74f7163e52e067428be766d9e4d1a7f1220f93abe8e1687804aab951a96a6dafc289947eb
   languageName: node
   linkType: hard
 
