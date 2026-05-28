@@ -1,6 +1,7 @@
-import { BaseEndpointTypes } from '../endpoint/price'
-import { makeLogger } from '@chainlink/external-adapter-framework/util'
 import { WebsocketReverseMappingTransport } from '@chainlink/external-adapter-framework/transports/websocket'
+import { makeLogger } from '@chainlink/external-adapter-framework/util'
+import { BaseEndpointTypes } from '../endpoint/price'
+import { ShardedWebsocketReverseMappingTransport } from './sharded'
 import {
   BaseMessage,
   blocksizeDefaultUnsubscribeMessageBuilder,
@@ -31,8 +32,17 @@ export type WsTransportTypes = BaseEndpointTypes & {
   }
 }
 
-export const transport: WebsocketReverseMappingTransport<WsTransportTypes, string> =
-  new WebsocketReverseMappingTransport<WsTransportTypes, string>({
+// BlockSize Capital's WebSocket server closes connections after ~60s once they
+// hold more than ~85 concurrent vwap subscriptions. Sharding across multiple
+// WS connections keeps each one under the cap.
+const NUM_SHARDS = Number(process.env.WS_NUM_SHARDS || 4)
+
+const createInnerPriceTransport = (): WebsocketReverseMappingTransport<
+  WsTransportTypes,
+  string
+> => {
+  let t: WebsocketReverseMappingTransport<WsTransportTypes, string>
+  t = new WebsocketReverseMappingTransport<WsTransportTypes, string>({
     url: (context) => context.adapterSettings.WS_API_ENDPOINT,
     handlers: {
       open: (connection, context) =>
@@ -48,16 +58,23 @@ export const transport: WebsocketReverseMappingTransport<WsTransportTypes, strin
           return []
         }
         const updates = message.params.updates
-        return handlePriceUpdates(updates, transport)
+        return handlePriceUpdates(updates, t)
       },
     },
     builders: {
       subscribeMessage: (params) => {
         const pair = `${params.base}${params.quote}`.toUpperCase()
-        transport.setReverseMapping(pair, params)
+        t.setReverseMapping(pair, params)
         return buildBlocksizeWebsocketTickersMessage('vwap_subscribe', pair)
       },
       unsubscribeMessage: (params) =>
         blocksizeDefaultUnsubscribeMessageBuilder(params.base, params.quote, 'vwap_unsubscribe'),
     },
   })
+  return t
+}
+
+export const transport = new ShardedWebsocketReverseMappingTransport<WsTransportTypes, string>(
+  NUM_SHARDS,
+  () => createInnerPriceTransport(),
+)
