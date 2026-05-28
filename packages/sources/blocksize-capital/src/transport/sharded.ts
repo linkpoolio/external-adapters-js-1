@@ -58,12 +58,21 @@ export class ShardedWebsocketReverseMappingTransport<T extends WebsocketTranspor
     transportName: string,
   ): Promise<void> {
     logger.info(`Initializing ${this.numShards} WS shards for ${transportName}`)
-    // Pass the SAME transport name to every shard so cache keys are stable
-    // regardless of which shard owns the pair. Each shard still has an
-    // isolated subscription set internally because that's per-instance.
+    // Each shard must have a UNIQUE name when initialize() runs so the framework
+    // builds a per-shard subscription set (otherwise with CACHE_TYPE=redis all
+    // shards share a single redis-backed set and every shard ends up subscribing
+    // to every pair via its own WS — defeating the sharding).
+    //
+    // After initialize, we restore `name` to the canonical transportName so the
+    // response cache writes from the inner transport land under the key the
+    // foreground HTTP request expects (`...-${transportName}-${params}`).
     await Promise.all(
-      this.shards.map((s) =>
-        s.initialize(dependencies, adapterSettings, endpointName, transportName),
+      this.shards.map((s, i) =>
+        s
+          .initialize(dependencies, adapterSettings, endpointName, `${transportName}-shard-${i}`)
+          .then(() => {
+            ;(s as unknown as { name: string }).name = transportName
+          }),
       ),
     )
     // All shards share the same response cache (passed via dependencies).
